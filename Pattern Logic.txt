@@ -1,4 +1,4 @@
-Creating Algorithm For Q4
+Algorithm For Q4
 
 Rows i Total = 9
 Columns j Total = 5

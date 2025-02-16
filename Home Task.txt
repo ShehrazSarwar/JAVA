@@ -1,0 +1,120 @@
+Student Name: Shehraz Sarwar
+ID: 29261
+Home Task
+
+Q1.Reverse Pattern
+
+CODE: 
+
+public class ReversePattern {
+    public static void main(String[] args)
+    {
+        for(int i = 4; i>=1; i--)
+        {
+            for(int j=1; j<=i; j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+    
+}
+
+
+Q2.Table
+
+CODE:
+
+public class Table {
+    public static void main(String[] args)
+    {
+        for(int i=1; i<=10; i++)
+        {
+            System.out.println("Table Of: "+i);
+            for(int j=1; j<=10; j++)
+            {
+                System.out.println(i+" X "+ j +" = "+ i*j);
+            }
+            System.out.println();
+            
+        }
+    }
+    
+}
+
+
+Q3.Greatest Common Divisor or HCF
+
+CODE:
+
+import java.util.Scanner;
+
+public class GCD_HCF {
+    public static void main(String[] args)
+    {
+        System.out.println("Enter Two Numbers To Find Their GCD(HCD):");
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter First Number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter Second Number: ");
+        int num2 = sc.nextInt();
+        
+        int GCD = 1;
+        
+        for(int i=1;i<=num1 && i<=num2; i++)
+        {
+            if(num1 % i == 0 && num2 % i == 0)
+            {
+                GCD = i;
+            }
+        }
+        
+        System.out.println("The Greatest Common Divisor Or HCF Of "+ num1 +" and "+ num2 +" Is: "+ GCD);
+    }
+}
+
+Q4.LCM Least Common Multiple
+
+CODE:
+
+import java.util.Scanner;
+
+public class LCM {
+    public static void main(String[] args)
+    {
+        System.out.println("Enter Two Numbers To Find Their LCM:");
+        
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter First Number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter Second Number: ");
+        int num2 = sc.nextInt();
+        
+        int LCM = 1;
+        
+        if(num1>num2)
+        {
+            LCM = num1;
+        }
+        else
+        {
+            LCM = num2;
+        }
+      
+        for(int i =1; i>=0; i++)
+        {
+            if(LCM % num1 == 0 && LCM % num2 ==0)
+            {
+                break;
+            }
+            LCM = LCM + 1;
+        }
+        
+        System.out.println("The LCM Of "+ num1 +" and "+ num2 +" Is: "+ LCM);
+    }
+    
+}

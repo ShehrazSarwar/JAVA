@@ -1,0 +1,20 @@
+Write an algorithm to search for a number in an array.
+
+n=4
+1,2,3,4
+
+num = 2
+int found = 0;
+
+0,1,2,3 ... Indexing
+
+for(int i = 0; i < 4; i++)
+{
+	if(arr[i] == num){
+		System.out.println("Found At Location: "+ i);
+		found++;
+	}
+}
+if(found == 0)
+System.out.println("number not found");
+
