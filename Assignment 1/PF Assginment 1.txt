@@ -1,0 +1,260 @@
+Student Name: Shehraz Sarwar
+ID: 29261
+Section: 032410102
+PF Assignment #1
+
+
+Q1. Write a program to convert tonns into kilograms, pounds into kilograms, depending upon the choice of the user.
+
+CODE:
+
+import java.util.Scanner;
+
+class conversion{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter 1 To Convert Tons Into kilograms \nEnter 2 To Convert Pounds Into kilograms");
+        int choice = sc.nextInt();
+
+        if (choice == 1) 
+        {
+            System.out.print("Enter Number Of Tons: ");
+            float Tons = sc.nextFloat();
+            float Conversion = Tons*1000;
+            System.out.println("Tons: "+ Tons +" Into Kg: "+ Conversion);
+        }
+        else if (choice == 2)
+        {
+            System.out.print("Enter Number Of Pounds: ");
+            float Pounds = sc.nextFloat();
+            double Conversion = Pounds*0.453592;
+            System.out.println("Pounds: "+ Pounds +" Into Kg: "+ Conversion);
+        }
+        else{
+            System.out.println("Wrong Choice Please Select 1 Or 2");
+        }
+
+    }
+}
+
+
+
+Q2. Write a program to convert farenheit into celcius and celcius into farenheit depending upon the choice of the user.
+
+CODE:
+
+import java.util.Scanner;
+
+class conversion{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter 1 To Convert Farenheit Into Celcius \nEnter 2 To Convert Celcius Into Farenheit");
+        int choice = sc.nextInt();
+
+        if (choice == 1) 
+        {
+            System.out.print("Enter Value Of Farenheit: ");
+            float Farenheit = sc.nextFloat();
+            float Conversion = ((Farenheit-32)*5)/9;
+            System.out.println("Farenheit: "+ Farenheit +"F Into Celcius: "+ Conversion +"C");
+        }
+        else if (choice == 2)
+        {
+            System.out.print("Enter Value Of Celcius: ");
+            float Celcius = sc.nextFloat();
+            float Conversion = ((9*Celcius)/5)+32;
+            System.out.println("Celcius: "+ Celcius +"C Into Farenheit: "+ Conversion +"F");
+        }
+        else{
+            System.out.println("Wrong Choice Please Select 1 Or 2");
+        }
+
+    }
+}
+
+
+
+Q3. Write a program marks in 5 subjects and calculate total, average and percentage
+
+CODE:
+
+import java.util.Scanner;
+
+class Result{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Marks Of Your 5 Subjects:");
+        
+        System.out.print("Enter Marks Of First Subject: ");
+        int sub1 = sc.nextInt();
+        
+        System.out.print("Enter Marks Of Second Subject: ");
+        int sub2 = sc.nextInt();
+        
+        System.out.print("Enter Marks Of Third Subject: ");
+        int sub3 = sc.nextInt();
+        
+        System.out.print("Enter Marks Of Fourth Subject: ");
+        int sub4 = sc.nextInt();
+        
+        System.out.print("Enter Marks Of Fifth Subject: ");
+        int sub5 = sc.nextInt();
+        
+        int TotalMarks = sub1+sub2+sub3+sub4+sub5;
+        float AverageMarks = TotalMarks/5.0f;
+        float Percentage = (TotalMarks/500.0f)*100;
+        
+        System.out.println("Total Marks: "+ TotalMarks +" Average Marks: "+ AverageMarks + " Percentage: "+ Percentage + "%");
+        
+    }
+}
+
+Q4. Write a program to get a number from the user and check whether it is positive or negative.
+
+CODE:
+
+import java.util.Scanner;
+
+class Check{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter any number: ");
+        int number = sc.nextInt();
+
+        if (number > 0) 
+        {
+            System.out.println("The number " + number + " is positive");
+        } 
+        else if (number < 0) 
+        {
+            System.out.println("The number " + number + " is negative");
+        }
+        else 
+        {
+            System.out.println("The number is zero");
+        }
+    }
+}
+
+
+
+Q5. Write a program to find the volume of a cylinder.
+
+CODE:
+
+import java.util.Scanner;
+
+class Volume{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Program To Calculate Volume of a Cylinder: ");
+        
+        System.out.print("Enter 1 If You Know Radius Otherwise Enter 2 For Calculation Of Radius Through Diameter: ");
+        
+        int selection = sc.nextInt();
+        
+        float radius = 0;
+        int R = 1;
+        
+        if(selection == 1)
+        {
+            System.out.print("Enter Radius: ");
+            radius = sc.nextFloat();
+        }
+        else if(selection == 2)
+        {
+            System.out.print("Enter Diameter: ");
+            float diameter = sc.nextFloat();
+            radius = diameter/2;
+        }
+        else
+        {
+            System.out.println("Wrong Selection Please Enter 1 or 2");
+            R = 0;
+        }
+        
+        if(R==1)
+        {
+            System.out.print("Enter Height: ");
+            float height = sc.nextFloat();
+            double V = 3.14*radius*radius*height;
+            System.out.println("Volume Of A Cylinder Is: "+ V);
+        }
+    
+    }
+}
+
+
+Q6.Write a program to compare two numbers and print the greatest number, or equal number and the least numbers of the two.
+
+CODE:
+
+import java.util.Scanner;
+
+class CompareNumber{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Program To Compare Two Numbers: ");
+        
+        System.out.print("Enter 1st Number: ");
+        int num1 = sc.nextInt();
+        
+        System.out.print("Enter 2nd Number: ");
+        int num2 = sc.nextInt();
+        
+        if(num1 > num2)
+        {
+            System.out.println("The Greatest Number Is "+ num1 +" and The Least Number Is "+ num2);
+        }
+        else if(num2 > num1)
+        {
+            System.out.println("The Greatest Number Is "+ num2 +" and The Least Number Is "+ num1);
+        }
+        else
+        {
+            System.out.println("Both Numbers Are Equal");
+        }
+        
+    }
+}
+
+Q7.Write a program to find a quotient and remainder of one number from the other number entered by the user.
+
+CODE:
+
+import java.util.Scanner;
+
+class QuoRema{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter the numerator: ");
+        int numerator = sc.nextInt();
+        
+        System.out.print("Enter the denominator: ");
+        int denominator = sc.nextInt();
+        
+        if(denominator == 0) 
+        {
+            System.out.println("Division by zero is not possible");
+        } 
+        else 
+        {
+            int quotient = numerator/denominator;
+            int remainder = numerator%denominator;
+            System.out.println("Quotient: " + quotient);
+            System.out.println("Remainder: " + remainder);
+        }
+    }
+}
+
